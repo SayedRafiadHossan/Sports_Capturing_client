@@ -91,7 +91,9 @@ const Header = () => {
           </div>
           <Link to="/" className="lg:flex-1">
             <img src={img1} className="mr-3 h-6 sm:h-10" alt="..." />
-            <div className="text-2xl font-bold">Sports Capturing</div>
+            <div className="text-2xl font-bold">
+              Sports <span className="text-blue-600"> Capturing</span>
+            </div>
           </Link>
           <div
             className="hidden w-full md:block md:w-auto"
