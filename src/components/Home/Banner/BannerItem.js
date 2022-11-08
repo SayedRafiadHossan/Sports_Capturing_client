@@ -8,22 +8,21 @@ const BannerItem = ({ slide }) => {
       <div className="carousel-img">
         <img src={image} alt="" className="w-full rounded-lg" />
       </div>
-      <div className="absolute flex justify-end transform -translate-y-1/2 w-2/5 left-24 top-1/2">
-        <p className="text-xl text-white">
-          There are many variations of passages of available, but the majority
-          have suffered alteration in some form
-        </p>
-      </div>
       <div className="absolute flex justify-start transform -translate-y-1/2 w-2/5 left-24 top-3/4">
-        <button className="btn btn-warning mr-5">Warning</button>
-        <button className="btn btn-outline btn-warning">Warning</button>
+        <button className="btn btn-warning mr-5">Course</button>
+        <button className="btn btn-outline btn-warning">Blog</button>
       </div>
       <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/4">
         <h1 className="text-6xl font-bold text-white">
-          Affordable <br />
-          price for car <br />
-          Servicing
+          No <span className="text-red-600">Pain </span>
+          <br />
+          <span className="text-red-600">No</span> Gain
         </h1>
+      </div>
+      <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/2">
+        <p className="text-2xl  text-white">
+          Don't miss your best experience with our best team...
+        </p>
       </div>
       <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
         <a href={`#slide${prev}`} className="btn btn-circle mr-5">
