@@ -5,6 +5,7 @@ import Error from "./components/Error/Error";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Main from "./components/Main/Main";
+import SignUp from "./components/SignUp/SignUp";
 
 function App() {
   const router = createBrowserRouter([
@@ -24,6 +25,10 @@ function App() {
         {
           path: "/Login",
           element: <Login></Login>,
+        },
+        {
+          path: "/Signup",
+          element: <SignUp></SignUp>,
         },
       ],
     },

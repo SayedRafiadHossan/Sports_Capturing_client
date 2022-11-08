@@ -21,7 +21,7 @@ const BannerItem = ({ slide }) => {
       </div>
       <div className=" absolute flex justify-end transform lg:-translate-y-1/2 lg:left-24 top-1/2">
         <p className="lg:text-2xl text-white">
-          Don't miss your best experience with our best team...
+          Don't miss your best experience with us...
         </p>
       </div>
       <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">

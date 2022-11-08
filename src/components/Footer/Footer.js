@@ -11,7 +11,9 @@ const Footer = () => {
             <Link className="link link-hover">About us</Link>
             <Link className="link link-hover">Contact</Link>
             <Link className="link link-hover">Shop</Link>
-            <Link className="link link-hover">Blog</Link>
+            <Link className="link link-hover" to="/blog">
+              Blog
+            </Link>
           </div>
           <div>
             <div className="grid grid-flow-col gap-4">
@@ -80,7 +82,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
+            <p>Copyright © 2022 - All right reserved Sports Capturing.</p>
           </div>
         </footer>
         <div className="flex flex-col justify-center pt-6 lg:pt-0"></div>
