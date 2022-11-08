@@ -1,11 +1,15 @@
 import React from "react";
+import img from "../Images/Blog.jpg";
 
 const Blog = () => {
   return (
     <section className="dark:bg-gray-800 dark:text-gray-100">
+      <div className="hero-content text-center lg:text-left">
+        <img src={img} alt="" />
+      </div>
       <div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
         <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">
-          Frequently Asked Questions
+          BLOG
         </h2>
         <div className="divide-y divide-gray-700">
           <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
