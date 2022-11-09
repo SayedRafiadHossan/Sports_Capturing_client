@@ -5,6 +5,7 @@ import Error from "./components/Error/Error";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Main from "./components/Main/Main";
+import Services from "./components/Services/Services";
 import SignUp from "./components/SignUp/SignUp";
 
 function App() {
@@ -29,6 +30,10 @@ function App() {
         {
           path: "/Signup",
           element: <SignUp></SignUp>,
+        },
+        {
+          path: "/services",
+          element: <Services></Services>,
         },
       ],
     },
