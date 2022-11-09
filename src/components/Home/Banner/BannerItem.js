@@ -21,7 +21,9 @@ const BannerItem = ({ slide }) => {
       </div>
       <div className=" absolute flex justify-end transform lg:-translate-y-1/2 lg:left-24 top-1/2">
         <p className="lg:text-2xl text-white">
-          We're here to edit any kind of image you have.
+          Take a few minutes and browse our services. We strive to be your
+          <br />
+          “One-Stop-Shop” for sports photography for your events!
         </p>
       </div>
       <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
