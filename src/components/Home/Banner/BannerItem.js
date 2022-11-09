@@ -14,14 +14,14 @@ const BannerItem = ({ slide }) => {
       </div> */}
       <div className="absolute flex justify-end transform -translate-y-1/2 lg:left-24 top-1/4">
         <h1 className="lg:text-6xl font-bold text-white">
-          No <span className="text-red-600">Pain </span>
+          Sports <span className="text-red-600">Capturing</span>
           <br />
-          <span className="text-red-600">No</span> Gain
+          <span className="text-red-600">Photo </span>Services
         </h1>
       </div>
       <div className=" absolute flex justify-end transform lg:-translate-y-1/2 lg:left-24 top-1/2">
         <p className="lg:text-2xl text-white">
-          Don't miss your best experience with us...
+          We're here to edit any kind of image you have.
         </p>
       </div>
       <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
