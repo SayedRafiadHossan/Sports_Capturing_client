@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 
 const ServicesCart = ({ c }) => {
   const { id, img, name, description, price } = c;
@@ -21,11 +23,15 @@ const ServicesCart = ({ c }) => {
       </div>
       <div className="space-y-4">
         <div className="space-y-2">
-          <img
-            src={img}
-            alt=""
-            className="block object-cover object-center w-full rounded-md h-72 bg-gray-500"
-          />
+          <PhotoProvider>
+            <PhotoView src={img}>
+              <img
+                src={img}
+                alt=""
+                className="block object-cover object-center w-full rounded-md h-72 bg-gray-500"
+              />
+            </PhotoView>
+          </PhotoProvider>
           <div className="flex items-center text-xs">
             <p className="text-lg">Price : {price}</p>
           </div>
