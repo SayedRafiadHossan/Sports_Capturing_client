@@ -5,6 +5,7 @@ import Error from "./components/Error/Error";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Main from "./components/Main/Main";
+import ReviewPart from "./components/ReviewPart/ReviewPart";
 import Services from "./components/Services/Services";
 import ServicesDetails from "./components/Services/ServicesDetails";
 import SignUp from "./components/SignUp/SignUp";
@@ -19,6 +20,7 @@ function App() {
         {
           path: "/",
           element: <Home></Home>,
+          loader: () => fetch("http://localhost:5000/services"),
         },
         {
           path: "/blog",
@@ -36,6 +38,11 @@ function App() {
           path: "/services",
           element: <Services></Services>,
           loader: () => fetch("http://localhost:5000/services"),
+        },
+        {
+          path: "/orders",
+          element: <ReviewPart></ReviewPart>,
+          loader: () => fetch("http://localhost:5000/orders"),
         },
         {
           path: "/services/:id",

@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import { AuthContext } from "../../Page/ContextAPI/AuthProvider/AuthProvider";
+import PersonReview from "../PersonReview/PersonReview";
 
 const ServicesDetails = () => {
   const details = useLoaderData();
@@ -13,7 +14,7 @@ const ServicesDetails = () => {
   const handlePlaceOrder = (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = `${form.firstName.value} ${form.lastName.value}`;
+    const userName = `${form.firstName.value} ${form.lastName.value}`;
     const email = user?.email || "unregistered";
     const phone = form.phone.value;
     const message = form.message.value;
@@ -21,8 +22,8 @@ const ServicesDetails = () => {
     const order = {
       service: _id,
       serviceName: name,
-      price,
-      customer: name,
+      photo: user?.photoURL || "Undefine",
+      customer: userName,
       email,
       phone,
       message,
@@ -68,9 +69,9 @@ const ServicesDetails = () => {
           <p className="leading-snug mt-5 text-lg">{description}</p>
         </div>
       </div>
+      <PersonReview _id={_id}></PersonReview>
 
       {/* Review Part */}
-
       <div>
         <h1 className="text-5xl font-bold mb-6">Your opinion matters!</h1>
         <form onSubmit={handlePlaceOrder} className="mx-[20%] mb-10">
@@ -100,7 +101,6 @@ const ServicesDetails = () => {
               placeholder="Your Email"
               className="input input-ghost w-full input-bordered"
               defaultValue={user?.email}
-              readOnly
             />
           </div>
           <textarea
