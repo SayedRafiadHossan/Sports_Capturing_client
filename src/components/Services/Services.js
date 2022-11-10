@@ -8,7 +8,7 @@ const Services = () => {
   return (
     <div className="grid lg:grid-cols-3 gap-6 my-6 lg:ml-20">
       {allServices.map((c) => (
-        <ServicesCart key={c.id} c={c}></ServicesCart>
+        <ServicesCart key={c._id} c={c}></ServicesCart>
       ))}
     </div>
   );

@@ -4,7 +4,7 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 
 const ServicesCart = ({ c }) => {
-  const { id, img, name, description, price } = c;
+  const { _id, img, name, description, price } = c;
   return (
     <div className="max-w-lg p-4 shadow-md bg-gray-800 text-white  rounded-xl">
       <div className="flex justify-between pb-4 border-bottom">
@@ -17,8 +17,8 @@ const ServicesCart = ({ c }) => {
             {name}
           </Link>
         </div>
-        <Link to={`/details/${id}`}>
-          <button className="btn btn-primary">See All</button>
+        <Link to={`/services/${_id}`}>
+          <button className="btn btn-primary">Details</button>
         </Link>
       </div>
       <div className="space-y-4">
@@ -37,7 +37,7 @@ const ServicesCart = ({ c }) => {
           </div>
         </div>
         <div className="space-y-2">
-          <Link rel="noopener noreferrer" href="#" className="block">
+          <Link rel="" href="#" className="block">
             <h3 className="text-2xl font-semibold text-violet-400">{name}</h3>
           </Link>
           <p className="leading-snug text-gray-400">{description}</p>
