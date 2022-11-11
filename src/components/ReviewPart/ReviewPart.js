@@ -9,7 +9,7 @@ const ReviewPart = () => {
   const handleReviewDelete = (id) => {
     const proceed = window.confirm("Are you sure delete this review");
     if (proceed) {
-      fetch(`https://sport-photographer-servers.vercel.app/orders/${id}`, {
+      fetch(`https://sports-photography-server-eight.vercel.app/orders/${id}`, {
         method: "DELETE",
         headers: {
           authorization: `Bearer ${token}`,

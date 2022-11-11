@@ -23,7 +23,9 @@ function App() {
           path: "/",
           element: <Home></Home>,
           loader: () =>
-            fetch("https://sport-photographer-servers.vercel.app/services"),
+            fetch(
+              "https://sports-photography-server-eight.vercel.app/services"
+            ),
         },
         {
           path: "/blog",
@@ -49,7 +51,9 @@ function App() {
           path: "/services",
           element: <Services></Services>,
           loader: () =>
-            fetch("https://sport-photographer-servers.vercel.app/services"),
+            fetch(
+              "https://sports-photography-server-eight.vercel.app/services"
+            ),
         },
         {
           path: "/orders",
@@ -59,14 +63,14 @@ function App() {
             </PrivateRoute>
           ),
           loader: () =>
-            fetch("https://sport-photographer-servers.vercel.app/orders"),
+            fetch("https://sports-photography-server-eight.vercel.app/orders"),
         },
         {
           path: "/services/:id",
           element: <ServicesDetails></ServicesDetails>,
           loader: ({ params }) =>
             fetch(
-              `https://sport-photographer-servers.vercel.app/services/${params.id}`
+              `https://sports-photography-server-eight.vercel.app/services/${params.id}`
             ),
         },
       ],
