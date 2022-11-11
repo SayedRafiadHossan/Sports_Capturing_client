@@ -29,7 +29,7 @@ const ServicesDetails = () => {
       message,
     };
 
-    fetch("http://localhost:5000/orders", {
+    fetch("https://sports-photographer-server-nine.vercel.app/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -8,11 +8,14 @@ const SingleReview = ({ x, handleReviewDelete }) => {
   const { _id, photo, email, customer, message, serviceName } = x;
   console.log(email);
   const updates = (data) => {
-    fetch(`http://localhost:5000/orders/${x?._id}`, {
-      method: "PUT",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(data),
-    })
+    fetch(
+      `https://sports-photographer-server-nine.vercel.app/orders/${x?._id}`,
+      {
+        method: "PUT",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {
