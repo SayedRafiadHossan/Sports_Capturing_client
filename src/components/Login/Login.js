@@ -9,14 +9,8 @@ const handleLogin = (email, password, loginUser, location, navigate) => {
 };
 
 const Login = () => {
-  const {
-    signInWithGoogle,
-    loginUser,
-    isLoading,
-    authError,
-    user,
-    githubSignIn,
-  } = useAuth();
+  const { signInWithGoogle, loginUser, isLoading, authError, githubSignIn } =
+    useAuth();
   const location = useLocation();
   const navigate = useNavigate();
 

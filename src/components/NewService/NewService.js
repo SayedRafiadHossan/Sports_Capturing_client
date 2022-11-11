@@ -28,7 +28,7 @@ const NewService = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged === true) {
-          alert("order placed successfully");
+          // tos
           form.reset();
         }
 

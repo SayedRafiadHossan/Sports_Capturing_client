@@ -65,10 +65,11 @@ const ServicesDetails = () => {
         <div className="lg:w-[25%]  items-center flex flex-col justify-center">
           <h1 className="mb-4 text-xl font-extrabold">{name}</h1>
           <p className="mb-4 font-bold">ID : {_id}</p>
-          <p className="font-bold">Price : {price}</p>
+          <p className="font-bold">Price : {price}$</p>
           <p className="leading-snug mt-5 text-lg">{description}</p>
         </div>
       </div>
+
       <PersonReview _id={_id}></PersonReview>
 
       {/* Review Part */}

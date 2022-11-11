@@ -12,13 +12,11 @@ const PersonReview = ({ _id }) => {
   console.log(serviceReviews);
 
   return (
-    <>
-      <div>
-        {serviceReviews?.map((x) => (
-          <ReviewParts x={x} key={_id}></ReviewParts>
-        ))}
-      </div>
-    </>
+    <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-[90%] mx-auto">
+      {serviceReviews?.map((x) => (
+        <ReviewParts x={x} key={_id}></ReviewParts>
+      ))}
+    </div>
   );
 };
 
