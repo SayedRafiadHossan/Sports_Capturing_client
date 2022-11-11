@@ -127,7 +127,7 @@ const SingleReview = ({ x, handleReviewDelete }) => {
                 placeholder="Your Massage"
                 defaultValue={x?.message}
               ></textarea>
-              <input className="btn" type="submit" value="Place Your Order" />
+              <input className="btn" type="submit" value="Place Your Review" />
             </form>
           </div>
         </div>
