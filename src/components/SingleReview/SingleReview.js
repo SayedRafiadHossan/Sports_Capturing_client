@@ -2,20 +2,19 @@ import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import { AuthContext } from "../../Page/ContextAPI/AuthProvider/AuthProvider";
+import useAuth from "../../Page/Hooks/useAuth";
 const SingleReview = ({ x, handleReviewDelete }) => {
-  const { user } = useContext(AuthContext);
-  console.log(x);
+  const { user, token } = useAuth();
   const { _id, photo, email, customer, message, serviceName } = x;
-  console.log(email);
   const updates = (data) => {
-    fetch(
-      `https://sports-photographer-server-nine.vercel.app/orders/${x?._id}`,
-      {
-        method: "PUT",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(data),
-      }
-    )
+    fetch(`https://sport-photographer-servers.vercel.app/orders/${x?._id}`, {
+      method: "PUT",
+      headers: {
+        authorization: `Bearer ${token}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

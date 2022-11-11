@@ -5,13 +5,15 @@ import SingleReview from "../SingleReview/SingleReview";
 
 const ReviewPart = () => {
   const [reviewDelete, setReviewDelete] = useState([]);
+  const { token } = useAuth();
   const handleReviewDelete = (id) => {
     const proceed = window.confirm("Are you sure delete this review");
     if (proceed) {
-      fetch(`https://sports-photographer-server-nine.vercel.app/orders/${id}`, {
+      fetch(`https://sport-photographer-servers.vercel.app/orders/${id}`, {
         method: "DELETE",
         headers: {
-          authorization: `Bearer ${localStorage.getItem("genius-token")}`,
+          authorization: `Bearer ${token}`,
+          "content-type": "application/json",
         },
       })
         .then((res) => res.json())

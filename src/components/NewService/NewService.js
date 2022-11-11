@@ -21,7 +21,7 @@ const NewService = () => {
       description: description,
     };
 
-    fetch("https://sports-photographer-server-nine.vercel.app/services", {
+    fetch("https://sport-photographer-servers.vercel.app/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",

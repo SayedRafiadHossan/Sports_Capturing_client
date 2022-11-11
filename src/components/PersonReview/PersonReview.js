@@ -4,7 +4,7 @@ import ReviewParts from "../ReviewParts/ReviewParts";
 const PersonReview = ({ _id }) => {
   const [reviews, setReviews] = useState();
   useEffect(() => {
-    fetch("https://sports-photographer-server-nine.vercel.app/orders")
+    fetch("https://sport-photographer-servers.vercel.app/orders")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

@@ -10,6 +10,7 @@ import {
   updateProfile,
   signOut,
   GithubAuthProvider,
+  getIdToken,
 } from "firebase/auth";
 import firebaseAuthentication from "../Firebase/FirebaseInit";
 
@@ -22,6 +23,9 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
   // error state
   const [authError, setAuthError] = useState("");
+
+  //token state
+  const [token, setToken] = useState("");
 
   // declare auth
   const auth = getAuth();
@@ -113,6 +117,9 @@ const useFirebase = () => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+        getIdToken(user).then((idToken) => {
+          setToken(idToken);
+        });
       } else {
         setUser({});
       }
@@ -143,6 +150,7 @@ const useFirebase = () => {
     authError,
     signInWithGoogle,
     githubSignIn,
+    token,
   };
 };
 
