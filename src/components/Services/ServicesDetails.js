@@ -112,7 +112,7 @@ const ServicesDetails = () => {
                 className="textarea textarea-bordered h-24 w-full"
                 placeholder="Your Massage"
               ></textarea>
-              <input className="btn" type="submit" value="Place Your Order" />
+              <input className="btn" type="submit" value="Post Review" />
             </form>
           </div>
         </>
