@@ -1,5 +1,8 @@
 import React from "react";
 
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from "react-toastify";
+
 const NewService = () => {
   const handlePlaceOrder = (e) => {
     e.preventDefault();
@@ -28,7 +31,9 @@ const NewService = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged === true) {
-          // tos
+          toast.success("Service added", {
+            theme: "colored",
+          });
           form.reset();
         }
 
@@ -74,6 +79,7 @@ const NewService = () => {
         ></textarea>
         <input className="btn" type="submit" value="Place Your Order" />
       </form>
+      <ToastContainer position="top-center" />
     </div>
   );
 };

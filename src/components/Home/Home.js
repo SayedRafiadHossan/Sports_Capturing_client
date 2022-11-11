@@ -23,7 +23,7 @@ const Home = () => {
           type="button"
           className="px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100"
         >
-          See All
+          View All
         </button>
       </Link>
       <div>

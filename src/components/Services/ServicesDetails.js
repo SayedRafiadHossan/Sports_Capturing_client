@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import { AuthContext } from "../../Page/ContextAPI/AuthProvider/AuthProvider";
@@ -50,7 +50,7 @@ const ServicesDetails = () => {
 
   return (
     <div>
-      <div className="lg:flex lg:w-[70%] mx-auto shadow-2xl mt-20 mb-56 m-5">
+      <div className="lg:flex lg:w-[70%] mx-auto shadow-2xl mt-20 mb-20 m-5">
         <div className="lg:w-[75%]">
           <PhotoProvider>
             <PhotoView src={img}>
@@ -73,45 +73,57 @@ const ServicesDetails = () => {
       <PersonReview _id={_id}></PersonReview>
 
       {/* Review Part */}
-      <div>
-        <h1 className="text-5xl font-bold mb-6">Your opinion matters!</h1>
-        <form onSubmit={handlePlaceOrder} className="mx-[20%] mb-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-5">
-            <input
-              name="firstName"
-              type="text"
-              placeholder="First Name"
-              className="input input-ghost w-full input-bordered"
-            />
-            <input
-              name="lastName"
-              type="text"
-              placeholder="Last Name"
-              className="input input-ghost w-full input-bordered"
-            />
-            <input
-              name="phone"
-              type="text"
-              placeholder="Your Phone"
-              className="input input-ghost w-full input-bordered"
-              required
-            />
-            <input
-              name="email"
-              type="text"
-              placeholder="Your Email"
-              className="input input-ghost w-full input-bordered"
-              defaultValue={user?.email}
-            />
+
+      {user?.photoURL ? (
+        <>
+          <div>
+            <h1 className="text-5xl font-bold mb-6">Your opinion matters!</h1>
+            <form onSubmit={handlePlaceOrder} className="mx-[20%] mb-10">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-5">
+                <input
+                  name="firstName"
+                  type="text"
+                  placeholder="First Name"
+                  className="input input-ghost w-full input-bordered"
+                />
+                <input
+                  name="lastName"
+                  type="text"
+                  placeholder="Last Name"
+                  className="input input-ghost w-full input-bordered"
+                />
+                <input
+                  name="phone"
+                  type="text"
+                  placeholder="Your Phone"
+                  className="input input-ghost w-full input-bordered"
+                  required
+                />
+                <input
+                  name="email"
+                  type="text"
+                  placeholder="Your Email"
+                  className="input input-ghost w-full input-bordered"
+                  defaultValue={user?.email}
+                />
+              </div>
+              <textarea
+                name="message"
+                className="textarea textarea-bordered h-24 w-full"
+                placeholder="Your Massage"
+              ></textarea>
+              <input className="btn" type="submit" value="Place Your Order" />
+            </form>
           </div>
-          <textarea
-            name="message"
-            className="textarea textarea-bordered h-24 w-full"
-            placeholder="Your Massage"
-          ></textarea>
-          <input className="btn" type="submit" value="Place Your Order" />
-        </form>
-      </div>
+        </>
+      ) : (
+        <>
+          <h1 className="text-2xl mb-12">
+            If you review this service please <Link to="/login">Login</Link>{" "}
+            first
+          </h1>
+        </>
+      )}
     </div>
   );
 };

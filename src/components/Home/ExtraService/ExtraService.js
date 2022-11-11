@@ -111,7 +111,7 @@ const ExtraService = () => {
             </div>
             <div className="flex flex-wrap items-stretch -mx-4">
               <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
-                <div className="flex flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900 w-[80%]">
+                <div className="flex flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900 lg:w-[80%]">
                   <div className="space-y-2">
                     <h4 className="text-2xl font-bold">Package A</h4>
                     <span className="text-6xl font-bold">
@@ -209,7 +209,7 @@ const ExtraService = () => {
                 </div>
               </div>
               <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
-                <div className="flex flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-violet-400 dark:text-gray-900 w-[80%]">
+                <div className="flex flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-violet-400 dark:text-gray-900 lg:w-[80%]">
                   <div className="space-y-2">
                     <h4 className="text-2xl font-bold">Package B</h4>
                     <span className="text-6xl font-bold">
@@ -293,7 +293,7 @@ const ExtraService = () => {
                 </div>
               </div>
               <div className="w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
-                <div className="p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900 w-[80%]">
+                <div className="p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900 lg:w-[80%]">
                   <div className="space-y-2">
                     <h4 className="text-2xl font-bold">Package C</h4>
                     <span className="text-6xl font-bold">
