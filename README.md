@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Live Link - [Create React App](https://github.com/facebook/create-react-app).
+Project - [Live Link](https://sportes-capturing.netlify.app/)
 
 ## I havae use this project
 
